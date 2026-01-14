@@ -1,23 +1,23 @@
 ---
-order: 112
-route: /installation/st-1.12.0-migration-guide/
+突耳
+数据存储更新突耳按键移动焦点。或者，使用切换
 ---
 
-# 1.12.0 Migration Guide
+1.12.0更改SillyTavern处理用户数据的方式。按键移动焦点。或者，使用
 
-SillyTavern 1.12.0 (codename the "Neo Server" update) includes several critical changes that may affect the way you use SillyTavern.
+以前，所有持久数据都与前端部分一起存储在退出
 
-This guide will prepare you for the update and provide some further guidance.
+目录，这造成了混乱和潜在的故障点，以及使容器化和系统范围的应用程序安装相当具有挑战性。然后
 
-## Data storage update
+有什么变化？突耳
 
-1.12.0 changes the way SillyTavern handles the user data.
+所有持久信息移动到页面上的下一个交互元素。
 
-Previously, all of the persistent data was stored together with the frontend part in the `/public` directory, which created confusion and potential points of failure, as well as making containerization and system-wide app installation quite challenging.
+如设置和聊天（下面的完整列表）被移动到一个单独的目录与可配置的路径，使其可移植和独立于web服务器本身。当需要兼容性目的时，例如，托管扩展、全尺寸字符卡、用户图像上传等。智能重定向已被设置为自动托管数据目录中的用户文件。路由：/安装/st-1.12. 0-迁移-指南/`/public`订购：112
 
-### What's changed?
+路由：/安装/st-1.12. 0-迁移-指南/1.12.0移民指南
 
-All persistent information from `/public` such as settings and chats (full list below) was moved into a separate directory with the configurable path, making it portable and independent from the web server itself. When needed for compatibility purposes, for example, for hosting extensions, full-size character cards, user image uploads, etc. a smart redirect has been set up to automatically host user files from the data directory.
+路由：/安装/st-1.12. 0-迁移-指南/SillyTavern 1. 12.0（代号为“Neo服务器”更新）包括几个关键更改，可能会影响您使用SillyTavern的方式。`/public`1.12.0移民指南本指南将为您的更新做好准备，并提供一些进一步的指导。
 
 ### Setting a data root
 
